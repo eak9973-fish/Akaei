@@ -6,13 +6,12 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
-public class Akaei extends Application {
+public class AkaeiBrowser extends Application {
 
     @Override
     public void start(Stage stage) {
 
         TabPane tabPane = new TabPane();
-
 
         tabPane.getTabs().add(createNewTab("https://www.google.com"));
 
@@ -57,7 +56,6 @@ public class Akaei extends Application {
         tab.setContent(layout);
         tab.setClosable(true);
 
-      
         webEngine.titleProperty().addListener((obs, oldTitle, newTitle) -> {
             tab.setText(newTitle);
         });
